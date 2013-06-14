@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sdupdateapp="http://schemas.android.com/apk/res/com.otaserver.client"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screen"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/localinfotitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/maintitleheight"
+        android:background="@drawable/top" >
+
+        <ImageView
+            android:id="@+id/localinfo_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/localinfo_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.otaserver.client.customwidget.SdUpdatePromptView
+                android:id="@+id/localinfocontent"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sdupdatepromptviewheight"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_text"
+                sdupdateapp:textsize="@dimen/localinfotextsize" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_text">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip">
+
+                    <ImageView
+                        android:id="@+id/root_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/root_image" />
+
+                    <TextView
+                        android:id="@+id/root_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@+id/root_image"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/localinfotextsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/root_text"
+                        android:text="@string/root_text_advice"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                     >
+
+                    <ImageView
+                        android:id="@+id/sdcard_size_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/sd_card_image" />
+
+                    <TextView
+                        android:id="@+id/sdcard_size_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@+id/sdcard_size_image"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/localinfotextsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/sdcard_size_text"
+                        android:text="@string/sdcard_size_text_advice"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip">
+
+                    <ImageView
+                        android:id="@+id/battery_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/battery_image" />
+
+                    <TextView
+                        android:id="@+id/battery_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@+id/battery_image"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/localinfotextsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/battery_text"
+                        android:text="@string/battery_text_advice"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

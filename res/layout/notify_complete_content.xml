@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent" >
+
+	<ImageView android:id="@+id/completeicon" android:layout_width="40dip"
+		android:layout_height="40dip" android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true" android:src="@drawable/completeicon" />
+    
+    
+	<TextView 
+	    android:id="@+id/textViewComplete"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	 	android:text="下载完成"
+		android:layout_toRightOf="@+id/completeicon"
+		android:layout_centerVertical="true" />
+	
+</RelativeLayout>  
+
+	
+

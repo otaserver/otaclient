@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screen"
+     >
+
+   <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/maintitleheight"
+        android:id="@+id/questiontitle"
+        android:background="@drawable/top" >
+		<ImageView
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/question_back"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_margin="10dip"
+			android:src="@drawable/back"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/familiar_question_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <WebView
+        android:id="@+id/question_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        />
+        
+    
+</LinearLayout>

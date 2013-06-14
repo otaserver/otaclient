@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/abouttitle"
+        android:background="@drawable/bg_title" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/filemanagartitle"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    <ListView
+    	android:id="@+id/sdcard_file_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+	/>
+
+   
+</LinearLayout>

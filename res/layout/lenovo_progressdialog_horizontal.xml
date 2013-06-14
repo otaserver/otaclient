@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+
+    <LinearLayout
+        android:layout_width="@dimen/progressdialog_width"
+        android:layout_height="@dimen/progressdialog_height"
+        android:background="@drawable/bg_lenovo_dialog"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lenovo_progressdialog_horizontal_titletext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+  			android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        
+         <LinearLayout
+            android:layout_width="@dimen/progressdialog_width"
+            android:layout_height="3dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bottom_line_background"
+            >
+            
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressbar_horizontal"
+                style="@style/downloadProgressH"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/processbar_bg"
+                android:max="100"
+                android:progress="0" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:aboutapp="http://schemas.android.com/apk/res/com.otaserver.client"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screen"
+     >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/maintitleheight"
+        android:id="@+id/abouttitle"
+        android:background="@drawable/top" >
+		<ImageView
+		    android:layout_width="wrap_content"
+			android:layout_height="25dip"
+			android:id="@+id/about_back"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_margin="10dip"
+			android:src="@drawable/back"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/about_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_marginTop="5dip" >
+
+        <ImageView
+            android:id="@+id/about_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/icon" />
+        
+        
+        <TextView
+            android:id="@+id/about_text_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/about_image"
+            android:layout_marginLeft="15dip"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/more_item_text_size"
+            android:textColor="@android:color/black" />
+        
+        
+        <TextView
+            android:id="@+id/about_text_appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/about_text_ver"
+            android:layout_alignLeft="@+id/about_text_ver"
+            android:text="@string/appname"
+            android:textSize="@dimen/more_item_text_size"
+            android:textColor="@android:color/black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_text_ver"
+			android:layout_alignLeft="@+id/about_text_ver"
+            android:text="@string/contact_me"
+            android:textSize="@dimen/more_item_text_size"
+            android:textColor="@android:color/black" />
+ 
+           
+    </RelativeLayout>
+
+
+
+    <com.otaserver.client.customwidget.AboutPromptView
+        android:id="@+id/aboutPromptView1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sdupdatepromptviewheight"
+        android:layout_weight="0.4"
+        android:background="@drawable/bg_text"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        aboutapp:textsize="@dimen/localinfotextsize"
+        android:scrollbars="vertical"
+		android:scrollbarTrackVertical="@drawable/scrollbar_track"
+		
+       	/>
+     
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:text="@string/Thanks"
+        android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    
+
+
+</LinearLayout>

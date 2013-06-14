@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sdupdateapp="http://schemas.android.com/apk/res/com.otaserver.client" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/sdcard_file_path"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sdupdate_input_height"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="11dip"
+            android:layout_weight="0.8"
+            android:background="@drawable/input"
+            android:gravity="center_vertical"
+            android:text="@string/sdcardupdate_textview_info"
+            android:textColor="#3C3C3C" />
+
+        <Button
+            android:id="@+id/sdcard_update_browser_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sdupdate_browser_button_height"
+			android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="0.2"
+            android:background="@drawable/btn_browser"
+            android:text="@string/sdcardupdate_btn_browser"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/sdcardupdate_prompt"
+        android:textColor="#104E8B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip" >
+
+        <com.otaserver.client.customwidget.SdUpdatePromptView
+            android:id="@+id/sdUpdatePromptView1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/sdupdatepromptviewheight"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_text"
+            sdupdateapp:textsize="@dimen/localinfotextsize" />
+        
+          <Button
+            android:id="@+id/sdcard_update_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/btn_dialog_color_selector"
+            android:text="@string/sdcardupdate_btn_update"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+    
+    
+      
+
+</LinearLayout>

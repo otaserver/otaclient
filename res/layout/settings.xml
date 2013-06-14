@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.otaserver.client"
+    android:id="@+id/settingsLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screen"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/maintitleheight"
+        android:id="@+id/settingstitle"
+        android:background="@drawable/top" >
+		<ImageView
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/settings_back"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_margin="10dip"
+			android:src="@drawable/back"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.otaserver.client.customwidget.SettingItemView
+            android:id="@+id/setting_onlywifi"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:layout_margin="10dip"
+            android:background="@drawable/bg_more_btn"
+            app:textname="@string/onlywlan"
+            app:textspec="@string/onlywlan_desc" />
+
+        <com.otaserver.client.customwidget.SettingItemView
+            android:id="@+id/setting_push"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:layout_margin="10dip"
+            android:background="@drawable/bg_more_btn"
+            app:textname="@string/push"
+            app:textspec="@string/push_desc" />
+
+        <com.otaserver.client.customwidget.SettingItemView
+            android:id="@+id/setting_reminder"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/settings_item_height"
+            android:layout_margin="10dip"
+            android:background="@drawable/bg_more_btn"
+            app:textname="@string/reminder"
+            app:textspec="@string/reminder_desc" />
+    </LinearLayout>
+
+    <com.otaserver.client.customwidget.ReminderLayout
+        android:id="@+id/reminderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/oneweeklayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_no_select_image" />
+
+                <ImageView
+                    android:id="@+id/oneweek_select_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_select_image"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="每周"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/twoweeklayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_no_select_image" />
+
+                <ImageView
+                    android:id="@+id/twoweek_select_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_select_image"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="两周"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/throwweeklayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_no_select_image" />
+
+                <ImageView
+                    android:id="@+id/throwweek_select_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_select_image"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="三周"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourweeklayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_no_select_image" />
+
+                <ImageView
+                    android:id="@+id/fourweek_select_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reminder_select_image"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="一个月"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </com.otaserver.client.customwidget.ReminderLayout>
+
+
+
+</LinearLayout>

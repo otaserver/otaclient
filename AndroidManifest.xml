@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.otaserver.client"
+      android:versionCode="10"
+      android:versionName="v1.2">
+    <uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
+	<uses-permission android:name="android.permission.DEVICE_POWER" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" /> 
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+		<activity android:name=".OtaActivity" android:label="@string/app_name" android:launchMode="singleTask"
+		 android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+
+		</activity>
+		
+		
+		<activity 
+		    android:name=".AboutActivity" 
+		 	android:screenOrientation="portrait" 
+		 	android:launchMode="singleTask"
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+		    android:name=".FileManagarActivity" 
+		 	android:screenOrientation="portrait" 
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		
+		<activity 
+		    android:name=".SettingActivity" 
+		 	android:screenOrientation="portrait" 
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+		    android:name=".LocalInfoActivity" 
+		 	android:screenOrientation="portrait" 
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+		    android:name=".FamiliarQuestionActivity" 
+		 	android:screenOrientation="portrait" 
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		
+		<activity 
+		    android:name=".FeedBack" 
+		 	android:screenOrientation="portrait" 
+		 	android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+
+    <receiver android:name="com.otaserver.client.receiver.ClientReceiver">
+		<intent-filter>
+			<action android:name="rfus001"></action>
+		</intent-filter>
+		
+		<intent-filter>
+			<action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+		</intent-filter>
+
+	</receiver>
+	<!-- 
+    <receiver android:name="com.otaserver.client.framework.DownloadService.downloadReceiver">
+		<intent-filter>
+			<action android:name="com.otaserver.client.download.start"></action>
+		</intent-filter>
+		
+		<intent-filter>
+			<action android:name="com.otaserver.client.download.pause"></action>
+		</intent-filter>
+		
+		<intent-filter>
+			<action android:name="com.otaserver.client.download.stop"></action>
+		</intent-filter>
+
+		</receiver>
+	
+	 -->
+		<service android:name="com.otaserver.client.framework.DownloadService" >
+		    <intent-filter android:priority="1000">
+                <action android:name="com.otaserver.client.framework.DownloadService" />
+				
+            </intent-filter>
+		</service>
+    </application>
+</manifest>

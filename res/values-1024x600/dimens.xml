@@ -1,0 +1,26 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="dialog_width">320dp</dimen>
+   	<dimen name="dialog_height">240dp</dimen>
+   	<dimen name="dialog_button_width">120dp</dimen>
+   	<dimen name="progressdialog_width">280dp</dimen>
+   	<dimen name="progressdialog_height">140dp</dimen>
+   	
+    <dimen name="maintitleheight">90dp</dimen>
+    
+    <dimen name="sdupdate_input_height">60dp</dimen>
+	<dimen name="sdupdate_browser_button_height">60dp</dimen>
+    <dimen name="sdupdatepromptviewheight">350dp</dimen>
+	<dimen name="sdupdatepromptviewtextsize">25sp</dimen>
+	<dimen name="localinfotextsize">18sp</dimen>
+	<dimen name="localinfotextViewHeight">348dp</dimen>
+	<dimen name="localinfotitleTop">30dp</dimen>
+	
+	<dimen name="more_item_height">70dp</dimen>
+	<dimen name="more_item_text_size">18sp</dimen>
+	
+	<dimen name="settings_item_height">90dp</dimen>
+</resources>

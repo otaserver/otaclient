@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/localinfotitleTop"
+            android:layout_marginLeft="10dip"
+            android:text="@string/online_text_updateinfo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#104E8B" />
+    
+        
+       </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/localinfotextViewHeight"
+        android:id="@+id/online_scrollview"
+        android:background="@drawable/bg_white_round"
+        android:layout_margin="10dip"
+        android:visibility="gone"
+         >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/targetver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:textColor="#272727" />
+
+                <TextView
+                    android:id="@+id/pkgsize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#272727" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/desc_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="#272727" />
+        </LinearLayout>
+    </ScrollView>
+	 
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:id="@+id/progressLinearLayout"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:paddingBottom="20dip"
+		android:visibility="gone"
+	    >
+	    <ProgressBar
+        	android:id="@+id/progressbar"
+            style="@style/downloadProgressH"
+            android:background="@drawable/processbar_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:max="100"
+            android:progress="0" />
+	    
+	    <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="15dip"
+          	android:textColor="#104E8B"
+             />
+	</LinearLayout>
+     
+
+     <RelativeLayout
+     	android:layout_width="fill_parent"
+     	android:layout_height="match_parent"
+		android:layout_gravity="bottom"
+
+     >
+		<Button 
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@drawable/btn_dialog_color_selector"
+			android:id="@+id/checkupdate" 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			android:text="@string/online_btn_check"
+			android:textSize="16sp"
+			android:textColor="@android:color/white"
+
+			/>
+		<Button 
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@drawable/btn_dialog_color_selector"
+			android:id="@+id/download" 
+			android:layout_height="wrap_content" 
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			android:visibility="invisible"
+			android:text="@string/online_btn_download"
+			android:textColor="@android:color/white"
+		/>
+		
+		
+		<LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+     		android:layout_height="wrap_content"
+     		android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="10dip"
+     		android:id="@+id/pauseStopLayout"
+     		android:visibility="invisible"
+		    >
+
+		
+			<Button 
+				android:id="@+id/pause" 
+				android:layout_height="wrap_content" 
+				android:layout_width="150dip" 
+				android:background="@drawable/btn_dialog_color_selector"
+				android:text="@string/online_btn_pause"
+				android:textColor="@android:color/white"
+			/>
+			<Button 
+				android:id="@+id/stop" 
+				android:layout_height="wrap_content" 
+				android:layout_width="150dip" 
+				android:layout_marginLeft="10dip"
+				android:background="@drawable/btn_dialog_color_selector"
+				android:text="@string/online_btn_stop"
+				android:textColor="@android:color/white"
+			/>
+		</LinearLayout>
+
+		
+	    <Button 
+			android:layout_centerInParent="true"
+			android:background="@drawable/btn_dialog_color_selector"
+			android:id="@+id/update1" 
+			android:layout_height="wrap_content" 
+			android:layout_width="match_parent" 
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			android:visibility="invisible"
+			android:text="@string/online_btn_update"
+			android:textColor="@android:color/white"
+			/>
+     	
+     </RelativeLayout>
+
+     
+</LinearLayout>
+
+		
+		
+
+		
+		
+

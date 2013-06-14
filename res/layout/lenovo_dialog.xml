@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="@dimen/dialog_height"
+        android:layout_gravity="right"
+        android:background="@drawable/bg_lenovo_dialog" >
+
+        <TextView
+            android:id="@+id/lenovo_dialog_titletext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dip"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        
+        <LinearLayout
+            android:layout_width="@dimen/dialog_width"
+            android:layout_height="3dip"
+            android:layout_below="@+id/lenovo_dialog_titletext"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bottom_line_background"
+            >
+            
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="25dip"
+            android:paddingRight="25dip" >
+
+            <TextView
+                android:id="@+id/lenovo_dialog_messagetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/lenovo_dialog_button_ok"
+                android:layout_width="@dimen/dialog_button_width"
+                android:layout_height="50dip"
+                android:layout_weight="0.2"
+                android:background="@drawable/bg_more_btn"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/lenovo_dialog_button_cancel"
+                android:layout_width="@dimen/dialog_button_width"
+                android:layout_height="50dip"
+                android:layout_marginLeft="15dip"
+                android:layout_weight="0.2"
+                android:background="@drawable/bg_more_btn"
+                android:text="取消" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
